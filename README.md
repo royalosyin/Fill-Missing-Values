@@ -1,6 +1,10 @@
 # Fill-Missing-Values
 Functions used to fill missing values in a 2D array or matrix. Mostly written by Fortran. 
 
+The first filling method is called poisson_grid_fill.
+Replaces all missing values in a grid with values derived from solving Poisson's equation via relaxation.
+The values at non-missing locations are used as boundary conditions and are returned unchanged.
+
 Prototype - F90
 
     subroutine poisxy2(a,il,jl,amsg,maxscn,crit,relc,guess,gtype,resmax, mscan)
