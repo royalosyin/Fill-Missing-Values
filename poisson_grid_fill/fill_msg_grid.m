@@ -53,11 +53,11 @@ function [out,mscan,resmax]= poisxy2(a,maxscn,crit,relc,guess,gtype)
     %%%%%%%%%% local %%%%%%%%%%%%%%%%
     %sor     = scratch area
 
-	  p25     = 0.25;
+    p25     = 0.25;
     [il,jl] = size(a);
     sor     = zeros(size(a));
 
-	  for j = 1 : jl
+    for j = 1 : jl
         n    = 0;
         aavg = 0.0d0;
         for i = 1 : il
@@ -90,7 +90,7 @@ function [out,mscan,resmax]= poisxy2(a,maxscn,crit,relc,guess,gtype)
 
 	end % End of for J
 
-	%-----------------------------------------------------------------------
+  %-----------------------------------------------------------------------
   %     iterate until errors are acceptable.
   %-----------------------------------------------------------------------
 	mscan = 0;  
@@ -150,4 +150,4 @@ function [out,mscan,resmax]= poisxy2(a,maxscn,crit,relc,guess,gtype)
         end
     end
     	
-	return
+return
